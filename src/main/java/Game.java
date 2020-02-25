@@ -45,7 +45,12 @@ public class Game {
 
         game.print();
 
-        player.moveBuilderNorth(board,player.builder);
+        // test move builder north
+        try {
+            player.moveBuilder(board,player.builder,new Move(0,1));
+        } catch (InvalidMoveExcpetion invalidMoveExcpetion) {
+            invalidMoveExcpetion.printStackTrace();
+        }
 
         game.print();
 
